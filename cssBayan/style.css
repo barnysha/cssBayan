@@ -1,5 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 *{
 margin: 0;
 padding: 0;
 top: 0;
+font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    margin: 10px 40px;
+}
+
+.container:hover {
+    cursor: crosshair;
+}
+
+.container .bayan-body {
+    margin: 0 auto;
+    height: 0;
+    line-height: 18px;
+    padding: 0 30px;
+    transition: color 0.5s, padding 0.5s;
+    overflow: hidden;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 10px 16px rgba(0,0,0,0.2); */
+}
+.container .bayan-body img {
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.container label {
+    cursor: crosshair;
+    background-color: #068a5e;
+    display: block;
+    margin: 0 0 5px;
+    padding: 15px 20px;
+    transition-duration: 0.65s;
+    color: #BFE2FF;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.container label:hover {
+    background-color: #ffffff;
+    color: #068a5e;
+}
+
+.container input{
+    display: none;
+}
+
+.container label:before {
+    content: "☺";
+    float: right;
+}
+
+.container input:checked + label {
+    background-color: #068a5e;
+    color: #ffffff;
+}
+
+.container input:checked + label:before {
+    transition-duration: 0.65s;
+    content: "☆";
+    transform: rotate(180deg);
+}
+.container input:checked + label + .bayan-body {
+    height: auto;
 }
