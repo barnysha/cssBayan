@@ -27,6 +27,11 @@ font-family: 'Roboto', sans-serif;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    transition: 0.65s;
+}
+
+.container .bayan-body img:hover {
+    transform: scale(1.1);
 }
 
 .container label {
