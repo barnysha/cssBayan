@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+margin: 0;
+padding: 0;
+top: 0;
+font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-size: 20px;
+}
+
+.container {
+    margin: 1% 1%;
+}
+
+.container:hover {
+    cursor: crosshair;
+}
+
+.container .bayan-body {
+    margin: 0 auto;
+    height: 0;
+    overflow: hidden;
+}
+.container .bayan-body img {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.65s;
+}
+
+.container .bayan-body img:hover {
+    transform: scale(1.1);
+}
+
+.container label {
+    cursor: crosshair;
+    background-color: #068a5e;
+    display: block;
+    margin-bottom: 0.5%;
+    padding: 2%;
+    transition-duration: 0.65s;
+    color: #BFE2FF;
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.container label:hover {
+    background-color: #ffffff;
+    color: #068a5e;
+    transition-duration: 0.65s;
+}
+
+.container input{
+    display: none;
+}
+
+.container label:before {
+    content: "☺";
+    float: right;
+}
+
+.container input:checked + label {
+    background-color: #068a5e;
+    color: #ffffff;
+    transition-duration: 0.65s;
+}
+
+.container input:checked + label:before {
+    content: "☆";
+    transform: rotate(180deg);
+    transition-duration: 0.65s;
+}
+.container input:checked + label + .bayan-body {
+    height: auto;
+}
+
+@media all and (max-width: 1100px) {
+    .container label {
+        font-size: 0.8rem;
+    }
+
+    .container .bayan-body:hover {
+        cursor: none;
+    }
+}
+
+@media all and (max-width: 820px) {
+    .container label {
+        font-size: 0.5rem;
+    }
+
+    .container .bayan-body:hover {
+        cursor: none;
+    }
+}
+
+@media all and (max-width: 320px) {
+    .container label {
+        font-size: 0.3rem;
+    }
+
+    .container .bayan-body:hover {
+        cursor: none;
+    }
+}
